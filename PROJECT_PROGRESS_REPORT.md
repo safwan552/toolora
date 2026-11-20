@@ -35,4 +35,4 @@
 - [x] Image-processing tools reject images exceeding 8000 pixels in either dimension.
 - [x] Password generator validates integer length (4–128) and uses rejection sampling to avoid modulo bias.
 - [x] PDF merge and image-to-PDF enforce aggregate input limits (100 MB) and image dimension limits (8000 pixels).
-- [x] Added copy feedback for text-tool results and aggregate resource limits for PDF/image-to-PDF inputs.\n- [ ] Verify these latest changes with CI and browser tests; repository connector has not confirmed CI runs for the latest commits.
+- [x] Added copy feedback for text-tool results and aggregate resource limits for PDF/image-to-PDF inputs.\n- [x] Fixed age-calculator date handling to use local calendar dates and validate parsed dates.\n- [x] Added reduced-motion support for visitors who request less animation.\n- [ ] Verify these latest changes with CI and browser tests; repository connector has not confirmed CI runs for the latest commits.
