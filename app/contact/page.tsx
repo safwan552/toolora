@@ -1,0 +1,1 @@
+export default function Contact(){return <div className="container section max-w-3xl"><h1 className="text-4xl font-black">Contact</h1><p className="muted mt-5 leading-7">For questions, feedback or issues with Toolora, please contact the site owner. A public contact email will be added here before launch.</p></div>}
