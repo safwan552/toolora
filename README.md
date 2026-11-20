@@ -1,8 +1,8 @@
-# Toolora
+# Toolsyra
 
 **Simple tools. Fast results.**
 
-Toolora is a free collection of browser-based utilities for everyday tasks.
+Toolsyra is a free collection of browser-based utilities for everyday tasks.
 
 ## Tools
 - Image compressor, resizer, JPG ↔ PNG converters
