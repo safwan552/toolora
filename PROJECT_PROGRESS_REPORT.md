@@ -9,11 +9,13 @@
 - [x] PDF merge, page extraction and image-to-PDF (pdf-lib), with input checks
 - [x] GitHub Actions build workflow
 - [x] SEO routes: robots.txt and sitemap
+- [x] Unique per-tool metadata and WebApplication structured data
 - [x] Privacy disclosures, contact via GitHub Issues, and deployment instructions
 
 ## Verified build checks
 - [x] Recent GitHub Actions build checks passed for image syntax repair, mobile UI/accessibility, calculator validation, privacy policy, contact page and README updates.
-- [x] Recent image and text/math changes compile successfully in CI.
+- [x] Cloudflare compatibility adjustment (removing standalone output) passed CI.
+- [ ] Latest SEO metadata/structured-data commit build is pending.
 
 ## Remaining before launch
 - [ ] Cloudflare Workers account/repository connection and first deployment (requires owner dashboard authorization)
