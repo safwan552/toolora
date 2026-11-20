@@ -40,7 +40,8 @@
 - [x] Added PDF page-count safeguards (500 pages merged; 1,000 pages maximum for extraction).
 - [x] Validate image MIME types and 40 MB file size before creating previews.
 - [x] Added ESLint 9 legacy-config compatibility so the CI lint step can locate the Next.js rules.
-- [ ] Confirm the new lockfile bootstrap workflow and run browser/device testing.
+- [x] Added `package-lock.json`; CI now uses `npm ci` with npm caching and read-only repository permissions.
+- [x] Latest CI run using the committed lockfile passed dependency audit, ESLint and production build.
 
 - [x] Added strict dependency audit gate; PostCSS override addresses the reported vulnerable transitive dependency.
-- [ ] Bootstrap and commit `package-lock.json` automatically, then switch CI to `npm ci` for reproducible installs.
+- [x] Committed `package-lock.json` and switched CI to `npm ci` for reproducible installs.
