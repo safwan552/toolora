@@ -14,14 +14,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-      - name: Install locked dependencies
-        run: npm ci
+      - name: Install dependencies
+        run: npm install
       - name: Dependency audit
         run: npm audit --audit-level=moderate
       - name: Lint
         env:
           ESLINT_USE_FLAT_CONFIG: "false"
         run: npm run lint
-      - name: Build
+      - name: Next.js build
         run: npm run build
