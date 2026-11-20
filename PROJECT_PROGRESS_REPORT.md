@@ -45,3 +45,11 @@
 
 - [x] Added strict dependency audit gate; PostCSS override addresses the reported vulnerable transitive dependency.
 - [x] Committed `package-lock.json` and switched CI to `npm ci` for reproducible installs.
+
+## Additional hardening (Nov 20, 2026)
+- [x] JPEG exports now paint a white background before drawing, preserving readable output when source PNGs contain transparency.
+- [x] JPG-to-PDF now limits batches to 50 images and caps generated documents at 500 pages.
+- [x] Removed the stale `toolora.pages.dev` hostname from metadata, sitemap and robots configuration; set `NEXT_PUBLIC_SITE_URL` to the actual Cloudflare Worker hostname or custom domain during deployment.
+- [x] Moved GitHub Actions to Node.js 22.
+- [x] Confirmed the combined image/PDF and SEO changes pass dependency audit, ESLint and production build on the Node.js 20 workflow; Node.js 22 verification is running.
+- [ ] Complete live browser/device smoke tests after Cloudflare preview deployment.
