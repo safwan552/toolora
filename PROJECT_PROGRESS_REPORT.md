@@ -15,7 +15,8 @@
 ## Verified build checks
 - [x] Recent GitHub Actions build checks passed for image syntax repair, mobile UI/accessibility, calculator validation, privacy policy, contact page and README updates.
 - [x] Cloudflare compatibility adjustment (removing standalone output) passed CI.
-- [ ] Latest SEO metadata/structured-data commit build is pending.
+- [ ] Latest SEO metadata/structured-data build status was not confirmed by the repository connector at the time of this report.
+- [ ] CI now runs ESLint before the production build (introduced in commit `296c0b2`); this new workflow run has not yet been confirmed.
 
 ## Remaining before launch
 - [ ] Cloudflare Workers account/repository connection and first deployment (requires owner dashboard authorization)
