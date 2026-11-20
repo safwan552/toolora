@@ -2,6 +2,10 @@
 
 Cloudflare Workers can automatically configure and deploy existing Next.js projects through Git integration. It uses **Workers**, not the legacy Pages product.
 
+## Configure the public site URL
+
+After Cloudflare creates the Worker hostname (or after connecting a custom domain), set `NEXT_PUBLIC_SITE_URL` to the exact public origin, for example `https://your-worker.your-account.workers.dev` or your custom domain. Set it in the build environment so canonical metadata, the sitemap and `robots.txt` use the real hostname. Until it is configured, Toolora deliberately omits the sitemap URL rather than publishing the incorrect old Pages hostname.
+
 ## One-time setup
 1. Sign in to Cloudflare.
 2. Open **Workers & Pages** and create a Worker.
