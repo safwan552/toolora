@@ -35,7 +35,8 @@
 - [x] Image-processing tools reject images exceeding 8000 pixels in either dimension.
 - [x] Password generator validates integer length (4–128) and uses rejection sampling to avoid modulo bias.
 - [x] PDF merge and image-to-PDF enforce aggregate input limits (100 MB) and image dimension limits (8000 pixels).
-- [x] Added copy feedback for text-tool results and aggregate resource limits for PDF/image-to-PDF inputs.\n- [x] Fixed age-calculator date handling to use local calendar dates and validate parsed dates.\n- [x] Added reduced-motion support for visitors who request less animation.
+- [x] Added copy feedback for text-tool results and aggregate resource limits for PDF/image-to-PDF inputs.
+- [x] Fixed age-calculator date handling to use local calendar dates and validate parsed dates.\n- [x] Added reduced-motion support for visitors who request less animation.
 - [x] Corrected age calculation to compare local calendar dates and reject invalid dates.
 - [x] Added PDF page-count safeguards (500 pages merged; 1,000 pages maximum for extraction).
 - [x] Validate image MIME types and 40 MB file size before creating previews.
@@ -43,13 +44,11 @@
 - [x] Added `package-lock.json`; CI now uses `npm ci` with npm caching and read-only repository permissions.
 - [x] Latest CI run using the committed lockfile passed dependency audit, ESLint and production build.
 
-- [x] Added strict dependency audit gate; PostCSS override addresses the reported vulnerable transitive dependency.
-- [x] Committed `package-lock.json` and switched CI to `npm ci` for reproducible installs.
 
 ## Additional hardening (Nov 20, 2026)
 - [x] JPEG exports now paint a white background before drawing, preserving readable output when source PNGs contain transparency.
 - [x] JPG-to-PDF now limits batches to 50 images and caps generated documents at 500 pages.
 - [x] Removed the stale `toolora.pages.dev` hostname from metadata, sitemap and robots configuration; set `NEXT_PUBLIC_SITE_URL` to the actual Cloudflare Worker hostname or custom domain during deployment.
 - [x] Moved GitHub Actions to Node.js 22.
-- [x] Confirmed the combined image/PDF and SEO changes pass dependency audit, ESLint and production build on the Node.js 20 workflow; Node.js 22 verification is running.
+- [x] Confirmed the combined image/PDF and SEO changes pass dependency audit, ESLint and production build on Node.js 22.
 - [ ] Complete live browser/device smoke tests after Cloudflare preview deployment.
