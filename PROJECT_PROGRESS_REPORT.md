@@ -1,25 +1,28 @@
 # Toolora Progress
 
 ## Implemented
-- [x] Next.js foundation, tool directory, header/footer and informational pages
-- [x] Searchable tool directory
+- [x] Next.js foundation, tool directory, responsive header/footer and informational pages
+- [x] Searchable tool directory with accessible search feedback
 - [x] Text utilities: word counter, case converter, whitespace cleaner, repeater
-- [x] Password generator, QR generator, age calculator, percentage calculator and basic calculator
-- [x] Image compressor, resizer and JPG/PNG conversion (browser canvas)
-- [x] PDF merge, page extraction and image-to-PDF (pdf-lib)
+- [x] Password generator, QR generator, age calculator, percentage calculator and basic calculator with validation
+- [x] Image compressor, resizer and JPG/PNG conversion (browser canvas), with validation and responsive controls
+- [x] PDF merge, page extraction and image-to-PDF (pdf-lib), with input checks
 - [x] GitHub Actions build workflow
-- [x] Build check passed on commit `dea9f416` and PDF route commit `d99c70a`
+- [x] SEO routes: robots.txt and sitemap
+- [x] Privacy disclosures, contact via GitHub Issues, and deployment instructions
 
-## Latest changes
-- [x] Case conversion modes: uppercase, lowercase, title case and sentence case
-- [x] Corrected title-case word-boundary handling and sentence-case sentence starts (commit `451eb4b`)
-- [x] Fixed image-resizer JSX syntax error discovered by CI (commit `822ad9c`)
-- [x] Added `robots.txt` and sitemap routes (commits `86ac67c`, `a5625a0`)
-- [ ] Verify build after these fixes
-- [ ] Mobile/accessibility polish and manual browser testing
-- [ ] Cloudflare deployment
+## Verified build checks
+- [x] Recent GitHub Actions build checks passed for image syntax repair, mobile UI/accessibility, calculator validation, privacy policy, contact page and README updates.
+- [x] Recent image and text/math changes compile successfully in CI.
+
+## Remaining before launch
+- [ ] Cloudflare Workers account/repository connection and first deployment (requires owner dashboard authorization)
+- [ ] Manual browser testing of all tools on mobile and desktop
+- [ ] Confirm live URL, sitemap and robots.txt after deployment
+- [ ] Consider custom domain and analytics/ad configuration only when desired
 
 ## Notes
-- QR code content is sent to the external QR service, disclosed in the tool UI.
-- Image/PDF tools process files locally in the browser.
+- QR code content is sent to an external QR service, disclosed in the tool UI and privacy policy.
+- Image/PDF tools are designed to process files locally in the browser.
 - Build checks are not a substitute for manual browser testing.
+- Deployment instructions: [DEPLOYMENT.md](DEPLOYMENT.md)
