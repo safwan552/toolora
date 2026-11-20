@@ -19,3 +19,6 @@ Built with Next.js, React, TypeScript and Tailwind CSS. See [project progress](P
 
 ## Feedback
 Report bugs and suggest features via [GitHub Issues](https://github.com/safwan552/toolora/issues).
+
+## Deployment
+See [DEPLOYMENT.md](DEPLOYMENT.md) for Cloudflare Workers deployment steps.
