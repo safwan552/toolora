@@ -19,9 +19,19 @@ The manual OpenNext configuration requires its adapter, Wrangler config, and Ope
 
 Do not use `next export` or the legacy Pages static-export flow for this app unless intentionally converting it to static output.
 
+## Launch smoke-test checklist
+After a preview or production deployment, test on mobile and desktop:
+- [ ] Home page loads and tool search filters results correctly.
+- [ ] Image compressor and resizer accept a valid image and download output; reject invalid files gracefully.
+- [ ] JPG/PNG conversions produce downloadable files.
+- [ ] PDF merge, split/extract and JPG-to-PDF work with sample files; malformed files show helpful errors.
+- [ ] Text tools, QR generation, password generator and calculators produce expected output.
+- [ ] Header, footer, mobile navigation and informational pages work; no broken links.
+- [ ] `/robots.txt` and `/sitemap.xml` load and contain the expected site routes.
+- [ ] Check console for errors and verify layout at narrow mobile width.
+
 ## After deployment
-- Open the generated `workers.dev` URL and test every tool, navigation and informational page.
-- Check `/robots.txt` and `/sitemap.xml`.
+- Open the generated `workers.dev` URL and complete the smoke tests above.
 - Configure a custom domain later from Worker settings if desired.
 - Keep GitHub build checks passing.
 
