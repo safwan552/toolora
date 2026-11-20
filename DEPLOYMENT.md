@@ -1,44 +1,23 @@
-# Deploy Toolora to Cloudflare Workers
+# Toolora Cloudflare Workers deployment
 
-Cloudflare Workers can automatically configure and deploy existing Next.js projects through Git integration. It uses **Workers**, not the legacy Pages product.
+Toolora uses Next.js with the OpenNext Cloudflare adapter.
 
-## Configure the public site URL
+## Build and deploy
 
-After Cloudflare creates the Worker hostname (or after connecting a custom domain), set `NEXT_PUBLIC_SITE_URL` to the exact public origin, for example `https://your-worker.your-account.workers.dev` or your custom domain. Set it in the build environment so canonical metadata, the sitemap and `robots.txt` use the real hostname. Until it is configured, Toolora deliberately omits the sitemap URL rather than publishing the incorrect old Pages hostname.
+- Install: `npm install`
+- Build: `npm run cf-build`
+- Preview: `npm run cf-preview`
+- Deploy: `npm run cf-deploy`
 
-## One-time setup
-1. Sign in to Cloudflare.
-2. Open **Workers & Pages** and create a Worker.
-3. Choose **Connect to Git** and authorize/connect GitHub.
-4. Select `safwan552/toolora` and branch `main`.
-5. Allow Cloudflare's framework auto-configuration to detect Next.js and generate the deployment setup. Review its generated pull request/configuration.
-6. Cloudflare can generate a preview deployment for testing; merge the generated configuration PR when ready, then deploy.
+Cloudflare Workers Builds should use the repository `main` branch, build command `npm install && npm run cf-build`, and deploy command `npm run cf-deploy`. The Worker config is in `wrangler.jsonc`.
 
-## Manual OpenNext setup (if auto-configuration doesn't work)
-For Next.js 15, OpenNext commands:
-- Build: `npx @opennextjs/cloudflare build`
-- Deploy: `npx @opennextjs/cloudflare deploy`
+## Launch checks
 
-The manual OpenNext configuration requires its adapter, Wrangler config, and OpenNext config. Prefer Cloudflare's auto-configuration unless the dashboard asks for manual settings.
+- Home page, tool search, navigation and mobile layout
+- Image compressor/resizer and format conversion
+- PDF merge, split/extract and JPG-to-PDF
+- Text tools, QR generation, password generator and calculators
+- `/robots.txt` and `/sitemap.xml`
+- Malformed input and error handling
 
-Do not use `next export` or the legacy Pages static-export flow for this app unless intentionally converting it to static output.
-
-## Launch smoke-test checklist
-After a preview or production deployment, test on mobile and desktop:
-- [ ] Home page loads and tool search filters results correctly.
-- [ ] Image compressor and resizer accept a valid image and download output; reject invalid files gracefully.
-- [ ] JPG/PNG conversions produce downloadable files.
-- [ ] PDF merge, split/extract and JPG-to-PDF work with sample files; malformed files show helpful errors.
-- [ ] Text tools, QR generation, password generator and calculators produce expected output.
-- [ ] Header, footer, mobile navigation and informational pages work; no broken links.
-- [ ] `/robots.txt` and `/sitemap.xml` load and contain the expected site routes.
-- [ ] Check console for errors and verify layout at narrow mobile width.
-
-## After deployment
-- Open the generated `workers.dev` URL and complete the smoke tests above.
-- Configure a custom domain later from Worker settings if desired.
-- Keep GitHub build checks passing.
-
-Official docs:
-- https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/
-- https://developers.cloudflare.com/workers/framework-guides/automatic-configuration/
+Do not use static export or the legacy Pages flow.
