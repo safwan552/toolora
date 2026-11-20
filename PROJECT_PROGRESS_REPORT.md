@@ -29,3 +29,10 @@
 - Image/PDF tools are designed to process files locally in the browser.
 - Build checks are not a substitute for manual browser testing.
 - Deployment instructions: [DEPLOYMENT.md](DEPLOYMENT.md)
+
+## Latest robustness improvements (Nov 20, 2026)
+- [x] Text repeater output capped at 1 million characters.
+- [x] Image-processing tools reject images exceeding 8000 pixels in either dimension.
+- [x] Password generator validates integer length (4–128) and uses rejection sampling to avoid modulo bias.
+- [x] PDF merge limits combined input size to 100 MB; image-to-PDF rejects images exceeding 8000 pixels in either dimension.
+- [ ] Verify these latest changes with CI and browser tests; repository connector has not confirmed CI runs for the latest commits.
