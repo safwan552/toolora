@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://toolora-tools.verce
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: "Toolora — Simple tools. Fast results.", template: "%s | Toolora" },
+  title: { default: "Toolsyra — Simple tools. Fast results.", template: "%s | Toolsyra" },
   description: "Free, simple and fast online tools for images, PDFs, text and everyday tasks.",
 };
 
