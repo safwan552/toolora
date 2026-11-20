@@ -16,7 +16,7 @@
 - [x] Recent GitHub Actions build checks passed for image syntax repair, mobile UI/accessibility, calculator validation, privacy policy, contact page and README updates.
 - [x] Cloudflare compatibility adjustment (removing standalone output) passed CI.
 - [x] GitHub Actions now runs ESLint before the production build.
-- [ ] Latest CI run after adding the ESLint 9 compatibility configuration is pending confirmation.
+- [x] Latest verified CI run (Nov 20, 2026): dependency audit, ESLint and production build all passed.
 
 ## Remaining before launch
 - [ ] Cloudflare Workers account/repository connection and first deployment (requires owner dashboard authorization)
@@ -40,4 +40,7 @@
 - [x] Added PDF page-count safeguards (500 pages merged; 1,000 pages maximum for extraction).
 - [x] Validate image MIME types and 40 MB file size before creating previews.
 - [x] Added ESLint 9 legacy-config compatibility so the CI lint step can locate the Next.js rules.
-- [ ] Confirm CI after the ESLint configuration fix and perform browser/device testing.
+- [ ] Confirm the new lockfile bootstrap workflow and run browser/device testing.
+
+- [x] Added strict dependency audit gate; PostCSS override addresses the reported vulnerable transitive dependency.
+- [ ] Bootstrap and commit `package-lock.json` automatically, then switch CI to `npm ci` for reproducible installs.
