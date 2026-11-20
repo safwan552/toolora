@@ -1,6 +1,6 @@
-# Toolora Cloudflare Workers deployment
+# Toolsyra Cloudflare Workers deployment
 
-Toolora uses Next.js with the OpenNext Cloudflare adapter.
+Toolsyra uses Next.js with the OpenNext Cloudflare adapter.
 
 ## Build and deploy
 
