@@ -15,8 +15,8 @@
 ## Verified build checks
 - [x] Recent GitHub Actions build checks passed for image syntax repair, mobile UI/accessibility, calculator validation, privacy policy, contact page and README updates.
 - [x] Cloudflare compatibility adjustment (removing standalone output) passed CI.
-- [ ] Latest SEO metadata/structured-data build status was not confirmed by the repository connector at the time of this report.
-- [ ] CI now runs ESLint before the production build (introduced in commit `296c0b2`); this new workflow run has not yet been confirmed.
+- [x] GitHub Actions now runs ESLint before the production build.
+- [ ] Latest CI run after adding the ESLint 9 compatibility configuration is pending confirmation.
 
 ## Remaining before launch
 - [ ] Cloudflare Workers account/repository connection and first deployment (requires owner dashboard authorization)
@@ -35,4 +35,9 @@
 - [x] Image-processing tools reject images exceeding 8000 pixels in either dimension.
 - [x] Password generator validates integer length (4–128) and uses rejection sampling to avoid modulo bias.
 - [x] PDF merge and image-to-PDF enforce aggregate input limits (100 MB) and image dimension limits (8000 pixels).
-- [x] Added copy feedback for text-tool results and aggregate resource limits for PDF/image-to-PDF inputs.\n- [x] Fixed age-calculator date handling to use local calendar dates and validate parsed dates.\n- [x] Added reduced-motion support for visitors who request less animation.\n- [ ] Verify these latest changes with CI and browser tests; repository connector has not confirmed CI runs for the latest commits.
+- [x] Added copy feedback for text-tool results and aggregate resource limits for PDF/image-to-PDF inputs.\n- [x] Fixed age-calculator date handling to use local calendar dates and validate parsed dates.\n- [x] Added reduced-motion support for visitors who request less animation.
+- [x] Corrected age calculation to compare local calendar dates and reject invalid dates.
+- [x] Added PDF page-count safeguards (500 pages merged; 1,000 pages maximum for extraction).
+- [x] Validate image MIME types and 40 MB file size before creating previews.
+- [x] Added ESLint 9 legacy-config compatibility so the CI lint step can locate the Next.js rules.
+- [ ] Confirm CI after the ESLint configuration fix and perform browser/device testing.
