@@ -1,1 +1,23 @@
-# Toolora Progress\n\n## Phase 1: Repository foundation\n- [x] README initialized\n- [x] Initial Next.js project files committed (pending verification)\n- [ ] Build and runtime verification\n- [x] Text utilities and several math tools implemented in code (not build-tested)\n- [x] QR generation via external service (discloses user content transfer)\n- [x] Searchable homepage directory\n- [ ] Image and PDF tool implementations\n- [ ] Implement tool functionality\n- [ ] Deployment\n\nThis report will be updated after verified milestones.\n\n## Recent additions\n- [x] Browser-local image compressor, resizer and format conversion UI committed (build not verified)\n- [x] QR code generation UI\n- [x] Calculator operations and searchable homepage\n- [x] GitHub Actions build workflow added; execution status not yet checked\n- [ ] PDF tools\n- [ ] Build validation / fix errors\n- [ ] Cloudflare deployment\n
+# Toolora Progress
+
+## Implemented
+- [x] Next.js foundation, tool directory, header/footer and informational pages
+- [x] Searchable tool directory
+- [x] Text utilities: word counter, case converter, whitespace cleaner, repeater
+- [x] Password generator, QR generator, age calculator, percentage calculator and basic calculator
+- [x] Image compressor, resizer and JPG/PNG conversion (browser canvas)
+- [x] PDF merge, page extraction and image-to-PDF (pdf-lib)
+- [x] GitHub Actions build workflow
+- [x] Build check passed on commit `dea9f416` and PDF route commit `d99c70a`
+
+## Latest changes
+- [x] Case conversion modes: uppercase, lowercase, title case and sentence case
+- [x] Corrected title-case word-boundary handling and sentence-case sentence starts (commit `451eb4b`)
+- [ ] Verify build after latest fix
+- [ ] Mobile/accessibility polish and manual browser testing
+- [ ] Cloudflare deployment
+
+## Notes
+- QR code content is sent to the external QR service, disclosed in the tool UI.
+- Image/PDF tools process files locally in the browser.
+- Build checks are not a substitute for manual browser testing.
