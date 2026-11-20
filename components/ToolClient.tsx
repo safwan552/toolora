@@ -7,7 +7,7 @@ export default function ToolClient({slug,name}:{slug:string,name:string}) {
  function age(){if(!date)return;let birth=new Date(date),now=new Date();let years=now.getFullYear()-birth.getFullYear();if(now.getMonth()<birth.getMonth()||(now.getMonth()===birth.getMonth()&&now.getDate()<birth.getDate()))years--;setOut(String(years)+" years")}
  function password(){let chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+";let len=Math.min(128,Math.max(4,Number(pwlen)||20));let arr=new Uint32Array(len);crypto.getRandomValues(arr);setOut(Array.from(arr,v=>chars[v%chars.length]).join(""))}
  function run(){if(slug==="word-counter"){let words=text.trim()?text.trim().split(/\s+/).length:0;setOut(`Words: ${words}\nCharacters: ${text.length}\nCharacters (no spaces): ${text.replace(/\s/g,"").length}\nSentences: ${(text.match(/[.!?]+/g)||[]).length}\nReading time: ${Math.ceil(words/200)} min`)}
- else if(slug==="case-converter")setOut(caseMode==="upper"?text.toUpperCase():caseMode==="lower"?text.toLowerCase():caseMode==="title"?text.toLowerCase().replace(/\\b\\w/g,m=>m.toUpperCase()):text.charAt(0).toUpperCase()+text.slice(1).toLowerCase());
+ else if(slug==="case-converter")setOut(caseMode==="upper"?text.toUpperCase():caseMode==="lower"?text.toLowerCase():caseMode==="title"?text.toLowerCase().replace(/\b\w/g,m=>m.toUpperCase()):text.toLowerCase().replace(/(^\s*|[.!?]\s+)(\w)/g,(m,p1,p2)=>p1+p2.toUpperCase()));
  else if(slug==="remove-extra-spaces")setOut(text.replace(/\s+/g," ").trim());
  else if(slug==="text-repeater")setOut(text.repeat(Math.min(1000,Math.max(0,Number(n)||0))));
  }
