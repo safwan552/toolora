@@ -14,8 +14,7 @@ jobs:
           node-version: 20
       - run: npm install
       - name: Dependency audit
-        continue-on-error: true
-        run: npm audit --json
+        run: npm audit --audit-level=moderate
       - name: Lint
         env:
           ESLINT_USE_FLAT_CONFIG: "false"
