@@ -1,0 +1,17 @@
+export const tools = [
+{slug:"image-compressor",name:"Image Compressor",description:"Reduce image file size without unnecessary quality loss.",category:"Image",icon:"🗜️"},
+{slug:"image-resizer",name:"Image Resizer",description:"Resize images to the dimensions you need.",category:"Image",icon:"📐"},
+{slug:"jpg-to-png",name:"JPG to PNG",description:"Convert JPG images into PNG format.",category:"Image",icon:"🖼️"},
+{slug:"png-to-jpg",name:"PNG to JPG",description:"Convert PNG images into JPG format.",category:"Image",icon:"🔄"},
+{slug:"merge-pdf",name:"Merge PDF",description:"Combine PDF documents into one file.",category:"PDF",icon:"📚"},
+{slug:"split-pdf",name:"Split PDF",description:"Extract pages from a PDF document.",category:"PDF",icon:"✂️"},
+{slug:"jpg-to-pdf",name:"JPG to PDF",description:"Turn images into a PDF document.",category:"PDF",icon:"📄"},
+{slug:"word-counter",name:"Word Counter",description:"Count words, characters and reading time.",category:"Text",icon:"🔢"},
+{slug:"case-converter",name:"Case Converter",description:"Change text to upper, lower or title case.",category:"Text",icon:"🔠"},
+{slug:"remove-extra-spaces",name:"Remove Extra Spaces",description:"Clean up unwanted spaces in your text.",category:"Text",icon:"🧹"},
+{slug:"text-repeater",name:"Text Repeater",description:"Repeat text as many times as you want.",category:"Text",icon:"🔁"},
+{slug:"password-generator",name:"Password Generator",description:"Generate strong random passwords.",category:"Utility",icon:"🔐"},
+{slug:"qr-code-generator",name:"QR Code Generator",description:"Create a QR code from text or a link.",category:"Utility",icon:"📱"},
+{slug:"percentage-calculator",name:"Percentage Calculator",description:"Calculate percentages quickly and easily.",category:"Utility",icon:"％"},
+{slug:"age-calculator",name:"Age Calculator",description:"Calculate your age from your birth date.",category:"Utility",icon:"🎂"},
+{slug:"calculator",name:"Basic Calculator",description:"A simple calculator for everyday math.",category:"Utility",icon:"🧮"}] as const;
