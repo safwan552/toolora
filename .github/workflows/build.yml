@@ -13,4 +13,7 @@ jobs:
         with:
           node-version: 20
       - run: npm install
-      - run: npm run build
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build
