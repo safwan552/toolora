@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function Header(){return <header className="border-b border-slate-200 bg-white/90 sticky top-0 z-20 backdrop-blur"><div className="container flex items-center justify-between py-4"><Link href="/" className="text-2xl font-black tracking-tight text-blue-600">Toolora<span className="text-slate-900">.</span></Link><nav className="flex gap-5 text-sm font-semibold text-slate-700"><Link href="/">Tools</Link><Link href="/about">About</Link><Link href="/contact">Contact</Link></nav></div></header>}
